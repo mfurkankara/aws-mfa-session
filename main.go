@@ -63,7 +63,7 @@ func main() {
 	fmt.Println("append new credentials")
 
 	fmt.Println("Updating ~/.bash_profile")
-	//exec.Command("bash", "-c", "source ~/.bash_profile").Run()
+	exec.Command("bash", "-c", "source ~/.bash_profile").Run()
 	fmt.Println("Updated ~/.bash_profile")
 
 	stdout, err = exec.Command("bash", "-c", checkSession).Output()
