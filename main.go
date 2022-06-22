@@ -19,7 +19,10 @@ type tokens struct {
 }
 
 func main() {
-
+	
+	colorCyan := "\033[36m"
+	colorReset := "\033[0m"
+	
 	var serialNumber string
 	fmt.Printf("Enter token code...\n")
 	fmt.Scan(&serialNumber)
@@ -65,6 +68,8 @@ func main() {
 	fmt.Println("Updating ~/.bash_profile")
 	exec.Command("bash", "-c", "source ~/.bash_profile").Run()
 	fmt.Println("Updated ~/.bash_profile")
+	
+	fmt.Println("Update ~/.bash_profile with"+string(colorCyan), "source ~/.bash_profile", string(colorReset)+" command when new terminal is opened")
 
 	stdout, err = exec.Command("bash", "-c", checkSession).Output()
 	if err != nil {
