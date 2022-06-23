@@ -24,7 +24,7 @@ func main() {
 	colorReset := "\033[0m"
 	
 	var serialNumber string
-	fmt.Printf("Enter token code...\n")
+	fmt.Printf("Enter serial number...\n")
 	fmt.Scan(&serialNumber)
 
 	var mfaCode string
